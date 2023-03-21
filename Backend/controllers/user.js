@@ -23,7 +23,7 @@ exports.signup = async (req, res, next) => {
   const username = req.body.username;
   const email = req.body.email;
   const password = req.body.password;
-  // const photo = req.file.filename;
+  const photo = req.file.filename;
   const hash = await bcrypt.hash(password, 12);
     const user = {
       username: username,
